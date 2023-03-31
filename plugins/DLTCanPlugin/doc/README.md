@@ -3,11 +3,11 @@
 DLTCanPlugin is used to log CAN message into a DLT TCP connection to a DLT Viewer.
 It is developed for an Arduino SW running on a Wemos Mini D1 HW and an MCP2515 Adapter.
 
-![Image of DLTPower](https://github.com/alexmucde/dlt-sim/blob/main/plugins/DLTCanPlugin/doc/images/DLTCanPlugin.jpg)
+![Image of DLTPower](images/DLTCanPlugin.jpg)
 
-![Image of Wemos Relais Board](https://github.com/alexmucde/dlt-sim/blob/main/plugins/DLTCanPlugin/doc/images/WemosCanBoard.jpg)
-![Image of Wemos Relais Board](https://github.com/alexmucde/dlt-sim/blob/main/plugins/DLTCanPlugin/doc/images/WemosCanBoard2.jpg)
-![Image of Wemos Relais Board](https://github.com/alexmucde/dlt-sim/blob/main/plugins/DLTCanPlugin/doc/images/WemosCanBoard3.jpg)
+![Image of Wemos Relais Board](images/WemosCanBoard.jpg)
+![Image of Wemos Relais Board](images/WemosCanBoard2.jpg)
+![Image of Wemos Relais Board](images/WemosCanBoard3.jpg)
 
 For further information about DLT visit the DLT Viewer project:
 

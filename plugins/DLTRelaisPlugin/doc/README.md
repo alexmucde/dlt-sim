@@ -4,9 +4,11 @@ DLTRelaisPlugin is used to control Relais for Test Automation.
 It is developed for an Arduino SW running on a Wemos Mini D1 HW or Wemos D1 HW and several shields.
 It provides an interface to DLT for Logging and Test Automation.
 
-![Image of Wemos D1 Mini Relais Board](https://github.com/alexmucde/dlt-sim/blob/main/plugin/DLTRelaisPlugin/doc/images/WemosD1MiniRelaisBoard.jpg)
+![Image of DLTRelaisPlugin](images/DLTRelaisPlugin.jpg)
 
-![Image of Wemos D1 Relais Board](https://github.com/alexmucde/dlt-sim/blob/main/DLTRelaisPlugin/doc/images/WemosD1RelaisBoard.jpg)
+![Image of Wemos D1 Mini Relais Board](images/WemosD1MiniRelaisBoard.jpg)
+
+![Image of Wemos D1 Relais Board](images/WemosD1RelaisBoard.jpg)
 
 For further information about DLT visit the DLT Viewer project:
 

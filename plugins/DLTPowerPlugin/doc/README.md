@@ -4,7 +4,7 @@ DLTPowerPlugin is used to control Power Supplies for Test Automation.
 Different Power supplies are supported.
 It provides an interface to DLT for Logging and Test Automation.
 
-![Image of DLTPowerPlugin](https://github.com/alexmucde/dlt-sim/blob/main/plugins/DLTPowerPlugin/doc/images/DLTPower.jpg)
+![Image of DLTPowerPlugin](images/DLTPowerPlugin.jpg)
 
 For further information about DLT visit the DLT Viewer project:
 

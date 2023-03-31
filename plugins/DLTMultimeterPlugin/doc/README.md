@@ -4,7 +4,7 @@ DLTMultimeterPlugin is used to control Multimeter for Test Automation.
 Different Multimeters are supported.
 It provides an interface to DLT for Logging and Test Automation.
 
-![Image of DLTPower](https://github.com/alexmucde/dlt-sim/blob/main/plugins/DLTMultimeterPlugin/doc/images/DLTPower.jpg)
+![Image of DLTPower](images/DLTMultimeterPlugin.jpg)
 
 For further information about DLT visit the DLT Viewer project:
 
