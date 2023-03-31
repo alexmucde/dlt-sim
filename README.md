@@ -3,7 +3,7 @@
 DLTSim provides a Framework for Testing and Test Automation. Different Plugins are provided for a lot of purposes.
 It provides an interface to DLT for Logging and Test Automation.
 
-![Image of DLTSim](https://github.com/alexmucde/dlt-sim/blob/main/doc/images/DLTSim.jpg)
+![Image of DLTSim](doc/images/dlt-sim.jpg)
 
 For further information about DLT visit the DLT Viewer project:
 
@@ -13,12 +13,11 @@ https://github.com/GENIVI/dlt-viewer
 
 The following Plugins are currently supported:
 
-* [DLTCanPlugin](https://github.com/alexmucde/dlt-sim/tree/main/plugins/DLTCanPlugin/doc)
-* [DLTCanPlugin](./plugins/DLTCanPlugin/doc)
-* [DLTMultimeterPlugin][plugins/DLTMultimeterPlugin/doc/README.md]
-* [DLTPowerPlugin][plugins/DLTPowerPlugin/doc/README.md]
-* [DLTRelaisPlugin][plugins/DLTRelaisPlugin/doc/README.md]
-* [DLTTestRobotPlugin][plugins/DLTTestRobotPlugin/doc/README.md]
+* [DLTCanPlugin](plugins/DLTCanPlugin/doc)
+* [DLTMultimeterPlugin](plugins/DLTMultimeterPlugin/doc)
+* [DLTPowerPlugin](plugins/DLTPowerPlugin/doc)
+* [DLTRelaisPlugin](plugins/DLTRelaisPlugin/doc)
+* [DLTTestRobotPlugin](plugins/DLTTestRobotPlugin/doc)
 
 ## Installation
 
