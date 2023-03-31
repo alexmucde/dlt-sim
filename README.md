@@ -13,7 +13,8 @@ https://github.com/GENIVI/dlt-viewer
 
 The following Plugins are currently supported:
 
-* [DLTCanPlugin][plugins/DLTCanPlugin/doc/README.md]
+* [DLTCanPlugin](https://github.com/alexmucde/dlt-sim/tree/main/plugins/DLTCanPlugin/doc)
+* [DLTCanPlugin](./plugins/DLTCanPlugin/doc)
 * [DLTMultimeterPlugin][plugins/DLTMultimeterPlugin/doc/README.md]
 * [DLTPowerPlugin][plugins/DLTPowerPlugin/doc/README.md]
 * [DLTRelaisPlugin][plugins/DLTRelaisPlugin/doc/README.md]
