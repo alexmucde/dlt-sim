@@ -1,0 +1,45 @@
+
+<DLTSim>
+    <Plugin>
+        <Name>DLT Relais Plugin</Name>
+        <Version>0.0.1</Version>
+        <Instance>1</Instance>
+        <Settings>
+            <title>DLT Relais Plugin</title>
+            <relaisName1>Relais1</relaisName1>
+            <relaisName2>Relais2</relaisName2>
+            <relaisName3>Relais3</relaisName3>
+            <relaisName4>Relais4</relaisName4>
+            <interface>COM9</interface>
+            <interfaceSerialNumber></interfaceSerialNumber>
+            <interfaceProductIdentifier>29987</interfaceProductIdentifier>
+            <interfaceVendorIdentifier>6790</interfaceVendorIdentifier>
+            <type>0</type>
+        </Settings>
+    </Plugin>
+    <Plugin>
+        <Name>DLT Test Robot Plugin</Name>
+        <Version>0.0.1</Version>
+        <Instance>2</Instance>
+        <Settings>
+            <dltViewerTestRobotPluginPort>4490</dltViewerTestRobotPluginPort>
+            <autoloadTestFilename>C:/workspace/github/alexmucde/DLTSim/tests/DLTPowerPluginTest.dtr</autoloadTestFilename>
+            <autoloadTests>1</autoloadTests>
+            <autostartTests>0</autostartTests>
+        </Settings>
+    </Plugin>
+    <Plugin>
+        <Name>DLT Power Plugin</Name>
+        <Version>0.0.1</Version>
+        <Instance>3</Instance>
+        <Settings>
+            <interface>COM3</interface>
+            <interfaceSerialNumber>0001</interfaceSerialNumber>
+            <interfaceProductIdentifier>60000</interfaceProductIdentifier>
+            <interfaceVendorIdentifier>4292</interfaceVendorIdentifier>
+            <type>1</type>
+            <powerName>Power</powerName>
+            <substractCurrent>0</substractCurrent>
+        </Settings>
+    </Plugin>
+</DLTSim>

@@ -1,0 +1,91 @@
+;***********************************************************************
+; Testcases for DLT Power Plugin
+;***********************************************************************
+;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Testcase init
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+test id init
+test description Initialize the Plugin Test
+test begin
+
+; power off all Relais
+injection DSIM Power off
+injection DSIM Power VOLTAGE 12.0
+
+; wait 3s
+wait 3000
+
+test end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Testcase cyclic on and off
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+test id cyclic_on_off
+test description Cyclic On and Off
+test begin
+
+; power on
+injection DSIM Power on
+wait 3000
+injection DSIM Power off
+wait 3000
+
+test end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Testcase power ramp
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+test id power_ramp
+test description Power Ramp
+test begin
+
+; power on
+injection DSIM Power on
+wait 3000
+
+; trigger relais standard
+injection DSIM Power VOLTAGE 11.0
+wait 1000
+injection DSIM Power VOLTAGE 11.5
+wait 1000
+injection DSIM Power VOLTAGE 12.0
+wait 1000
+injection DSIM Power VOLTAGE 12.5
+wait 1000
+injection DSIM Power VOLTAGE 13.0
+wait 1000
+injection DSIM Power VOLTAGE 12.0
+
+test end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Testcase check_power_consumption
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+test id check_power_consumption
+test description Check Power Consumption
+test begin
+
+; configure filters
+filter clear
+filter add DSIM DLTP AMP
+
+; power off
+injection DSIM Power off
+wait 3000
+
+; power on
+injection DSIM Power on
+injection DSIM Power VOLTAGE 12.0
+wait 3000
+
+; Wait for system Wakeup
+find greater 30000 DLTP POWR AMP Power 0.50
+
+; Wait for system Wakeup
+find smaller 30000 DLTP POWR AMP Power 0.10
+
+wait 3000
+
+test end

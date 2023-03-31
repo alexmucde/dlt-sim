@@ -1,0 +1,74 @@
+;***********************************************************************
+; Testcases for DLT Relais Plugin
+;***********************************************************************
+;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Testcase init
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+test id init
+test description Initialize the Plugin Test
+test begin
+
+; power off all Relais
+injection DSIM Relais1 off
+injection DSIM Relais2 off
+injection DSIM Relais3 off
+
+; wait 3s
+wait 3000
+
+test end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Testcase cyclic on and off
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+test id cyclic_on_off
+test description Cyclic On and Off
+test begin
+
+; power on first Relais
+injection DSIM Relais1 on
+wait 3000
+injection DSIM Relais1 off
+injection DSIM Relais2 on
+wait 3000
+injection DSIM Relais2 off
+injection DSIM Relais3 on
+wait 3000
+injection DSIM Relais3 off
+
+test end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Testcase cyclic trigger
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+test id cyclic_trigger
+test description Cyclic Trigger
+test begin
+
+; trigger relais standard
+injection DSIM Relais1 trigger
+wait 1000
+injection DSIM Relais2 trigger
+wait 1000
+injection DSIM Relais3 trigger
+wait 1000
+
+; trigger relais long
+injection DSIM Relais1 trigger 1000
+wait 2000
+injection DSIM Relais2 trigger 1000
+wait 2000
+injection DSIM Relais3 trigger 1000
+wait 2000
+
+; trigger relais short
+injection DSIM Relais1 trigger 100
+wait 1000
+injection DSIM Relais2 trigger 100
+wait 1000
+injection DSIM Relais3 trigger 100
+wait 1000
+
+test end
