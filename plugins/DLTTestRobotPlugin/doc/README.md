@@ -2,7 +2,7 @@
 
 DLTTestRobotPlugin is used to run Test sripts to automate tests in combination with the DLT Viewer.
 
-![Image of DLTTestRobotPlugin](https://github.com/alexmucde/dlt-sim/blob/main/plugin/DLTTestRobotPlugin/doc/images/DLTTestRobotPlugin.jpg)
+![Image of DLTTestRobotPlugin](images/DLTTestRobotPlugin.jpg)
 
 For further information about DLT visit the DLT Viewer project:
 
