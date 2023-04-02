@@ -448,3 +448,4 @@ void DLTRelaisPlugin::injection(QString data)
     if(form)
         form->injection(data);
 }
+

@@ -17,9 +17,19 @@ public:
     explicit DLTCanPluginForm(DLTCanPlugin *plugin, QWidget *parent = nullptr);
     ~DLTCanPluginForm();
 
-private:
-    Ui::DLTCanPluginForm *ui;
+    void update();
 
+private slots:
+    void on_pushButtonSend_clicked();
+
+    void on_checkBoxSendCyclicMsg1Active_clicked(bool checked);
+
+    void on_checkBoxSendCyclicMsg2Active_clicked(bool checked);
+
+private:
+    void closeEvent(QCloseEvent *event);
+
+    Ui::DLTCanPluginForm *ui;
     DLTCanPlugin *plugin;
 };
 
