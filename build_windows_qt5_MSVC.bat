@@ -38,8 +38,13 @@ if "%QTDIR%"=="" (
     ) else (set QTDIR=C:\Qt\5.15.2\msvc2019)
 )
 
-if "%MSVC_DIR%"=="" set MSVC_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Auxiliary\Build
-
+if exist "C:\Program Files (x86)\Microsoft Visual Studio\%MSVC_VER%\Enterprise\VC\Auxiliary\Build" (
+    REM Visual Studio Community Edition 2019
+	if "%MSVC_DIR%"=="" set "MSVC_DIR=C:\Program Files (x86)\Microsoft Visual Studio\%MSVC_VER%\Enterprise\VC\Auxiliary\Build"
+) else (
+    REM Vidual Studio Professional 2019
+	if "%MSVC_DIR%"=="" set "MSVC_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Auxiliary\Build"
+)
 
 set PATH=%QTDIR%\bin;%MSVC_DIR%;%MSVC_DIR%\bin;%PATH%
 set QTSDK=%QTDIR%
@@ -212,6 +217,9 @@ copy %SOURCE_DIR%\plugins\DLTCanPlugin\arduino\WemosD1R1CANKeyestudio\WemosD1R1C
 if %ERRORLEVEL% NEQ 0 GOTO ERROR_HANDLER
 
 copy %BUILD_DIR%\plugins\*.dll %INSTALLATION_DIR%\plugins
+if %ERRORLEVEL% NEQ 0 GOTO ERROR_HANDLER
+
+copy %BUILD_DIR%\custom_plugins\*.dll %INSTALLATION_DIR%\custom_plugins
 if %ERRORLEVEL% NEQ 0 GOTO ERROR_HANDLER
 
 copy %BUILD_DIR%\%NAME%.exe %INSTALLATION_DIR%
